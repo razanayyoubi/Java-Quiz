@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Time</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        #welcome-page {
+            background-image: url('Images/background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+
+    <!-- Welcome Page -->
+    <div id="welcome-page" class="min-h-screen flex flex-col items-center justify-center">
+        <h1 class="text-5xl font-bold mb-4 text-white drop-shadow-lg">Java Quiz</h1>
+        <h2 class="text-2xl mb-6 text-white">Ready To Start?</h2>
+        <button id="start-btn"
+            class="bg-white text-red-800 font-semibold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-red-100 transition transform hover:scale-105">
+            Start!
+        </button>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page"
+        class="hidden min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-red-900 via-rose-900 to-purple-900 p-6">
+        <div class="w-full max-w-2xl bg-red-950 bg-opacity-90 text-white rounded-2xl shadow-2xl p-8">
+
+            <!-- Question Number -->
+            <div id="question-number" class="text-lg font-semibold text-pink-400 mb-4">
+                Question 1 of 10
+            </div>
+
+            <!-- Question Text -->
+            <div id="question" class="text-2xl font-bold mb-6 text-white">
+                Question text goes here
+            </div>
+
+            <!-- Choices -->
+            <div id="choices" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Page -->
+    <div id="results-page"
+        class="hidden min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-red-900 via-rose-900 to-purple-900 text-white p-6">
+        <div class="bg-red-950 bg-opacity-90 rounded-2xl shadow-2xl p-10 text-center w-full max-w-lg">
+            <h1 class="text-4xl font-bold mb-6 text-rose-400">🎉 Quiz Finished!</h1>
+            <p class="text-2xl mb-8">
+                Your Score: <span id="score-display" class="font-bold text-rose-400">0</span> / 10
+            </p>
+            <button onclick="location.reload()"
+                class="bg-rose-800 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-pink-200 hover:text-gray-900 transition transform hover:scale-105">
+                Restart Quiz
+            </button>
+        </div>
+    </div>
+
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>
